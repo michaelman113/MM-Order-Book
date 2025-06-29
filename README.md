@@ -25,7 +25,7 @@ A high-performance, C++-based limit order book and matching engine designed for 
 - Zero heap allocations in hot path
 - Cache-aligned memory layout for limit levels
 
-## 📈 Benchmark Results
+## 📈 Benchmark Results (V0.1, 6/29/2025)
 
 | Order Count | Time (ms) | Throughput (orders/sec) |
 |-------------|-----------|--------------------------|
@@ -39,3 +39,11 @@ A high-performance, C++-based limit order book and matching engine designed for 
 - ![10,000 Orders](10000.png)
 - ![100,000 Orders](100000.png)
 
+## 🛠️ Roadmap (v0.2 and beyond)
+
+- [ ] Multi-threaded matching engine with feed handler
+- [ ] Lock-free SPSC queue for inter-thread messaging
+- [ ] Latency histogram + percentile tracking (p50, p99, p99.9)
+- [ ] Linux `perf` + flamegraph profiling
+- [ ] Kernel-bypass networking (AF_XDP or DPDK exploration)
+- [ ] Market data replay simulation from historical LOB messages
