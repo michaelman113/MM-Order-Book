@@ -39,7 +39,3 @@ A high-performance, C++-based limit order book and matching engine designed for 
 - ![10,000 Orders](10000.png)
 - ![100,000 Orders](100000.png)
 
-
-## 📚 Design (IN THE WORKS)
-
-See [`docs/architecture.md`](docs/architecture.md) for design notes and profiling plans.
