@@ -27,6 +27,7 @@ A high-performance, C++-based limit order book and matching engine designed for 
 
 ### 📈 v0.1: Single-Threaded Matching Engine (FIFO Price-Time Book)
 ![Design](Order_Book_Design.png)
+
 The engine maintains a limit order book with price-time priority queues for both buy and sell sides. Orders are matched using simple FIFO logic at overlapping price levels.
 
 
