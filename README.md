@@ -25,6 +25,19 @@ A high-performance, C++-based limit order book and matching engine designed for 
 - Zero heap allocations in hot path
 - Cache-aligned memory layout for limit levels
 
+### 📈 v0.1: Single-Threaded Matching Engine (FIFO Price-Time Book)
+![Design](Order_Book_Design.png)
+The engine maintains a limit order book with price-time priority queues for both buy and sell sides. Orders are matched using simple FIFO logic at overlapping price levels.
+
+
+Core Components:
+
+C++ STL-based std::map<price, std::queue<Order>> for both buy/sell books
+
+Matching logic compares top-of-book bid/ask and executes trades until price-time conditions are no longer satisfied
+
+Benchmarked at ~5,000 orders/sec on Intel i7-12700K (see below)
+
 ## 📈 Benchmark Results (V0.1, 6/29/2025)
 
 | Order Count | Time (ms) | Throughput (orders/sec) |
